@@ -75,21 +75,29 @@ body {
 }
 
 .logo2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  margin-top: 60px;
   height: 40px;
   border-radius: 1px;
   border: #111;
+  color: #032a3a;
+  
   }
+
   .logo2 .closed{
-    color: #fc5c03;
-    border: 0.5px solid black;
-    border-radius: 10px;
-    height: 40px;  
-     margin-top: 30px;
-    padding-top: 10px; 
+  color:#ff000a;
+  border: none;
+  height: 40px;
+  width: 570px;
+  margin-top: 30px;
+  padding-top: 10px;
+  outline: none;
   }
   
+
   .questions {
     background-color: #fc5c03;
     display: flex;
@@ -97,6 +105,7 @@ body {
     width: 100%;    
     text-align: center;
     margin-top: 100px;
+    margin-top: 0%;
 }
 .questions .entrega{
     width: 450px;
