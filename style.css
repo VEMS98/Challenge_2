@@ -7,6 +7,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #fff;
+  margin: 0;
 }
 
 .navbar{
@@ -73,6 +74,65 @@ body {
   font-size: 25px;
 }
 
+.logo2 {
+  text-align: center;
+  margin-top: 60px;
+  height: 40px;
+  border-radius: 1px;
+  border: #111;
+  }
+  .logo2 .closed{
+    color: #fc5c03;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    height: 40px;  
+     margin-top: 30px;
+    padding-top: 10px; 
+  }
+  
+  .questions {
+    background-color: #fc5c03;
+    display: flex;
+    height: 70px;
+    width: 100%;    
+    text-align: center;
+    margin-top: 100px;
+}
+.questions .entrega{
+    width: 450px;
+    padding: 10px;
+    cursor: pointer;
+}
+ .questions .espera{
+    background-color: rgba(235, 67, 6, 0.938);  
+height: 70px;
+width: 550px;
+padding: 10px;
+cursor: pointer;
+}
+.questions .telefone{
+    width: 450px;
+    padding: 10px;
+}
+.questions .material-icons{
+  font-size: 17px;
+}
+
+.opcoes {   
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 1em;
+  padding: 40px;   
+  text-align: center;
+  width: 100%;
+  cursor: pointer;   
+}
+
+.opcoes :hover{
+  border-bottom-style: solid;
+  border-color: #c22c2c;
+}
+
 #subheader{
   color: #ffff;
   text-align:center;
@@ -125,42 +185,63 @@ body {
 }
 
 #container{
-  position: relative;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background: #fff;
-  padding: 10px;
+  padding: 20px;
+  margin-left: -6px;
 }
 
 .produtos{
+  flex: 1 0 calc(33.33% - 20px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
+  min-width: 300px;
   min-height: 147px;
+  margin: 15px;
   width: 100%;
   background: #fff;
-  padding: 20px 20px 5px 20px;
+  padding: 20px;
   text-decoration: none;
+  text-align: center;
   transition: .2s;
   overflow: hidden;
   height: 100%;
   border-radius: 10px;
 }
 
+.produtos h2 {
+  margin-bottom: 15px;
+}
+
 .vendas{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px 2px 20px 20px;
+  display: block;
+  padding: 12px 10px;
   width: 100%;
 }
 
 .consumo{
   display: flex;
-  margin: 20px;
-  width: 45%;
+  margin: 10px;
   border: 1px solid rgb(182, 181, 181);
-  height: 177px;
+  height: auto;
+  padding: 6px;
+  text-align: center;
+  border-radius: 8px;
+  background: #f9f9f9;
+  transition: transform 0.2s;
+}
+
+.descricao {
+  margin-bottom: 10px;
 }
 
 .imagem img{
-  height: 145px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px;
+  object-fit: contain;
 }
 
 
@@ -169,15 +250,18 @@ body {
   margin-left: 40px;
   justify-items: center;
   justify-content: center;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .descricao{
   text-align: left;
   justify-content: center;
   justify-items: center;
-  padding: 50px 0 0 0;
+  padding: 20px;
   font-size: 18px;
-  width: 50%;
+  width: 100%;
 }
 
 .descricao li{
@@ -202,6 +286,7 @@ body {
 
 .consumo:hover{
   border:1px solid #fc5c03;
+  transform: scale(1.05);
 }
 
 .imagem:hover {
@@ -211,3 +296,35 @@ body {
 h2{
   padding-left: 40px;
 }
+
+ /* Tornando o site resposivo */
+@media (max-width: 768px) {
+.navbar .search input {
+  width: 100%;
+  }
+
+.navbar .search .searchbtn {
+  display: none;
+}
+
+.produtos {
+  width: 100%;
+}
+
+.vendas {
+  justify-content: center;
+}
+
+.consumo {
+  width: 90%;
+}
+
+.descricao {
+  width: 100%;
+}
+
+.imagem {
+  display: none;
+}
+}
+
