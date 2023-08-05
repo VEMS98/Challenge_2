@@ -151,7 +151,7 @@ cursor: pointer;
   background: rgb(0, 0, 0, .20);
 }
 .banner {
-  background-image: url('images/capa.jpg');
+  background-image: url('images/chamativo.jpg');
   background-size: cover;
   background-position: center center;
   color: white;
@@ -337,3 +337,10 @@ h2{
 }
 }
 
+/* Estilos para o rodapé */
+footer {
+  background-color: #ec4405;
+  padding: 20px;
+  text-align: center;
+  color: #000000;
+}
